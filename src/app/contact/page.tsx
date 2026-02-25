@@ -2,6 +2,7 @@
 
 import { FadeUp } from "@/components/ui/animations";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import Image from "next/image";
 
 export default function ContactPage() {
     const handleSubmit = (e: React.FormEvent) => {
@@ -13,11 +14,20 @@ export default function ContactPage() {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             {/* Header */}
-            <section className="bg-primary pt-32 pb-20 text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 text-white overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="https://images.unsplash.com/photo-1596524430615-b46475ddff6e?q=80&w=2070&auto=format&fit=crop"
+                        alt="Contact Us"
+                        fill
+                        className="object-cover opacity-40 grayscale"
+                    />
+                    <div className="absolute inset-0 bg-primary/95"></div>
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
                     <FadeUp>
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-                        <p className="text-xl text-gray-300 max-w-2xl mx-auto">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">Contact Us</h1>
+                        <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto font-light">
                             Get in touch with our expert team for comprehensive financial and compliance advisory.
                         </p>
                     </FadeUp>
@@ -38,12 +48,12 @@ export default function ContactPage() {
 
                             <div className="space-y-8">
                                 <div className="flex items-start">
-                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-6 shadow-sm border border-gray-100 flex-shrink-0">
-                                        <MapPin className="w-6 h-6 text-secondary" />
+                                    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mr-6 shadow-sm border border-gray-100 flex-shrink-0">
+                                        <MapPin className="w-7 h-7 text-secondary" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Head Office</h3>
-                                        <p className="text-gray-600 leading-relaxed">
+                                        <p className="text-gray-600 leading-relaxed text-lg">
                                             2nd Floor, Sriyanka Residency<br />
                                             8-3-214/54/1/A/2/4, Jaya Prakash Nagar<br />
                                             Padala Ramareddy Colony, Yousufguda<br />
@@ -53,22 +63,22 @@ export default function ContactPage() {
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-6 shadow-sm border border-gray-100 flex-shrink-0">
-                                        <Phone className="w-6 h-6 text-secondary" />
+                                    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mr-6 shadow-sm border border-gray-100 flex-shrink-0">
+                                        <Phone className="w-7 h-7 text-secondary" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Phone</h3>
-                                        <p className="text-gray-600 font-medium">+91 97054 33330</p>
+                                        <p className="text-gray-600 font-medium text-lg">+91 97054 33330</p>
                                     </div>
                                 </div>
 
                                 <div className="flex items-start">
-                                    <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mr-6 shadow-sm border border-gray-100 flex-shrink-0">
-                                        <Mail className="w-6 h-6 text-secondary" />
+                                    <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center mr-6 shadow-sm border border-gray-100 flex-shrink-0">
+                                        <Mail className="w-7 h-7 text-secondary" />
                                     </div>
                                     <div>
                                         <h3 className="text-xl font-bold text-gray-900 mb-2">Email</h3>
-                                        <div className="space-y-1">
+                                        <div className="space-y-2 text-lg">
                                             <a href="mailto:audit@dappina.in" className="block text-gray-600 font-medium hover:text-primary transition-colors">audit@dappina.in</a>
                                             <a href="mailto:pavan@dappina.in" className="block text-gray-600 font-medium hover:text-primary transition-colors">pavan@dappina.in</a>
                                         </div>
@@ -77,16 +87,23 @@ export default function ContactPage() {
                             </div>
 
                             {/* Map Placeholder */}
-                            <div className="mt-12 bg-gray-200 w-full h-64 rounded-sm flex items-center justify-center border border-gray-300">
-                                <div className="text-gray-500 font-medium flex flex-col items-center">
-                                    <MapPin className="w-8 h-8 mb-2 opacity-50" />
-                                    Google Maps Integration Placeholder
+                            <div className="mt-12 w-full h-80 rounded-sm relative overflow-hidden shadow-md group border border-gray-200">
+                                <Image
+                                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
+                                    alt="Location Map"
+                                    fill
+                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
+                                />
+                                <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors duration-500"></div>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
+                                    <MapPin className="w-10 h-10 mb-3 drop-shadow-md" />
+                                    <span className="font-bold text-xl drop-shadow-md">View on Google Maps</span>
                                 </div>
                             </div>
                         </FadeUp>
 
                         {/* Contact Form */}
-                        <FadeUp delay={0.2} className="bg-white p-8 md:p-12 rounded-sm shadow-sm border border-gray-100 h-fit">
+                        <FadeUp delay={0.2} className="bg-white p-8 md:p-12 rounded-sm shadow-xl border border-gray-100 h-fit">
                             <h2 className="text-2xl font-bold text-primary mb-6 border-b border-gray-100 pb-4">Request a Consultation</h2>
                             <form onSubmit={handleSubmit} className="space-y-6">
                                 <div>
@@ -123,8 +140,8 @@ export default function ContactPage() {
                                     <textarea id="message" required rows={5} className="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-sm focus:ring-2 focus:ring-primary/20 focus:border-primary outline-none transition-all resize-none" placeholder="Tell us about your requirements..."></textarea>
                                 </div>
 
-                                <button type="submit" className="w-full bg-primary text-white font-bold py-4 rounded-sm hover:bg-opacity-90 transition-colors flex items-center justify-center group shadow-md">
-                                    <Send className="w-5 h-5 mr-2 group-hover:-translate-y-0.5 group-hover:translate-x-0.5 transition-transform" />
+                                <button type="submit" className="w-full bg-primary text-white font-bold py-4 rounded-sm hover:bg-opacity-90 transition-colors flex items-center justify-center group shadow-md mt-4">
+                                    <Send className="w-5 h-5 mr-3 group-hover:-translate-y-1 group-hover:translate-x-1 transition-transform" />
                                     Submit Request
                                 </button>
                             </form>

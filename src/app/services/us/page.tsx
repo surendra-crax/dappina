@@ -1,16 +1,26 @@
 import { FadeUp, StaggerContainer, StaggerItem } from "@/components/ui/animations";
 import { FileText, Calculator, Users, Clock, Lock, ShieldCheck, CheckCircle } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function USTaxPracticePage() {
     return (
         <div className="flex flex-col min-h-screen bg-white">
             {/* Header */}
-            <section className="bg-primary pt-32 pb-20 text-white">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 text-white overflow-hidden">
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=2070&auto=format&fit=crop"
+                        alt="U.S. Tax Services"
+                        fill
+                        className="object-cover opacity-40 grayscale"
+                    />
+                    <div className="absolute inset-0 bg-primary/95"></div>
+                </div>
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                     <FadeUp className="max-w-3xl">
-                        <h1 className="text-4xl md:text-5xl font-bold mb-4">U.S. Outsourcing Services</h1>
-                        <p className="text-xl text-gray-300">
+                        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight">U.S. Outsourcing Services</h1>
+                        <p className="text-xl md:text-2xl text-gray-300 font-light">
                             Reliable, secure, and time-zone aligned back-office support for U.S. CPA firms and businesses.
                         </p>
                     </FadeUp>
