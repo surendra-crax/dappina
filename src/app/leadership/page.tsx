@@ -7,7 +7,6 @@ const leaders = [
         name: "CA Pavan Dappina, FCA, DISA",
         role: "Managing Partner",
         description: "Fellow Member of ICAI with over 10 years of experience in audit, financial reporting, and regulatory compliance.",
-        image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=800&auto=format&fit=crop",
         specializations: [
             "Statutory & Tax Audits",
             "Financial Statement Preparation",
@@ -20,7 +19,6 @@ const leaders = [
         name: "CA Sable Pradeep, ACA",
         role: "Partner",
         description: "Associate Member of ICAI with expertise in accounting frameworks and statutory compliances.",
-        image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=800&auto=format&fit=crop",
         specializations: [
             "Accounting & Bookkeeping Compliance",
             "GST Return Filing & Advisory",
@@ -64,9 +62,6 @@ export default function LeadershipPage() {
 
                                 {/* Profile Avatar Image */}
                                 <div className="md:w-1/3 flex flex-col items-center text-center relative z-10">
-                                    <div className="w-48 h-48 relative rounded-full overflow-hidden mb-6 border-4 border-white shadow-xl group-hover:border-primary/20 transition-colors">
-                                        <Image src={leader.image} alt={leader.name} fill className="object-cover" />
-                                    </div>
                                     <h2 className="text-2xl font-bold text-primary mb-1">{leader.name}</h2>
                                     <p className="text-secondary font-semibold text-lg">{leader.role}</p>
                                 </div>

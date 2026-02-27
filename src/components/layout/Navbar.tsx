@@ -51,16 +51,8 @@ export function Navbar() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-3">
-                        <img src="https://images.seeklogo.com/logo-png/51/2/ca-india-logo-png_seeklogo-513934.png" alt="CA India Logo" className="w-10 h-10 md:w-12 md:h-12 object-contain" />
-                        <div className="flex flex-col">
-                            <span className="text-xl md:text-2xl font-bold text-primary tracking-tight">
-                                DAPPINA & CO.
-                            </span>
-                            <span className="text-[9px] md:text-[10px] text-gray-500 uppercase tracking-widest font-semibold">
-                                Chartered Accountants
-                            </span>
-                        </div>
+                    <Link href="/" className="flex items-center">
+                        <img src="/images/Dappina & CO Logo.png" alt="Dappina & Co. Logo" className="h-12 md:h-16 w-auto object-contain" />
                     </Link>
 
                     {/* Desktop Navigation */}

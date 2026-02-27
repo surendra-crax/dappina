@@ -11,16 +11,8 @@ export function Footer() {
 
                     {/* Brand Info */}
                     <div className="space-y-4">
-                        <Link href="/" className="flex items-center space-x-3 mb-4 inline-flex">
-                            <img src="https://images.seeklogo.com/logo-png/51/2/ca-india-logo-png_seeklogo-513934.png" alt="CA India Logo" className="w-12 h-12 object-contain brightness-0 invert" />
-                            <div className="flex flex-col">
-                                <span className="text-2xl font-bold text-white tracking-tight">
-                                    DAPPINA & CO.
-                                </span>
-                                <span className="text-[10px] text-gray-300 uppercase tracking-widest font-semibold block">
-                                    Chartered Accountants
-                                </span>
-                            </div>
+                        <Link href="/" className="flex items-center mb-4 inline-flex bg-white/10 p-2 rounded-sm backdrop-blur-sm">
+                            <img src="/images/Dappina & CO Logo.png" alt="Dappina & Co. Logo" className="h-14 w-auto object-contain" />
                         </Link>
                         <p className="text-sm text-gray-300 leading-relaxed">
                             Delivering end-to-end accounting, taxation, audit, and regulatory compliance services across India and the United States with technical depth and practical insight.

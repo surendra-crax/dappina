@@ -1,8 +1,12 @@
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const inter = localFont({
+    src: '../fonts/Inter.ttf',
+    variable: '--font-inter',
+    display: 'swap',
+})
 
 export const metadata: Metadata = {
     title: 'Dappina & Co. | Chartered Accountants',

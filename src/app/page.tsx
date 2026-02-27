@@ -75,7 +75,7 @@ export default function Home() {
                     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
                         <FadeUp>
                             <div className="flex flex-col sm:flex-row sm:items-center gap-4 mb-6">
-                                <Image src="https://images.seeklogo.com/logo-png/51/2/ca-india-logo-png_seeklogo-513934.png" alt="CA Logo" width={80} height={80} className="object-contain" unoptimized />
+                                <Image src="/images/CA logo.png" alt="CA Logo" width={80} height={80} className="object-contain" unoptimized />
                                 <h2 className="text-3xl md:text-4xl font-bold text-primary">Built on Integrity. <br />Driven by Precision.</h2>
                             </div>
                             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
