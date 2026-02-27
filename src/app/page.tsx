@@ -1,4 +1,4 @@
-pimport Link from "next/link";
+import Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe, FileText, CheckCircle, TrendingUp, ShieldCheck, UserCheck } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem, AnimatedCounter } from "@/components/ui/animations";
 import Image from "next/image";
