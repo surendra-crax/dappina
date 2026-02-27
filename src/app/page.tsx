@@ -1,4 +1,4 @@
-import Link from "next/link";
+pimport Link from "next/link";
 import { ArrowRight, CheckCircle2, Globe, FileText, CheckCircle, TrendingUp, ShieldCheck, UserCheck } from "lucide-react";
 import { FadeUp, StaggerContainer, StaggerItem, AnimatedCounter } from "@/components/ui/animations";
 import Image from "next/image";
@@ -25,13 +25,13 @@ export default function Home() {
                     <div className="max-w-4xl">
                         <FadeUp>
                             <h1 className="text-4xl md:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 leading-tight text-white mt-10">
-                                India & U.S. Tax. <br />
-                                <span className="text-secondary drop-shadow-md">Audit. Compliance.</span>
+                                India & U.S. <br />
+                                <span className="text-secondary drop-shadow-md">Compliance.</span>
                             </h1>
                         </FadeUp>
                         <FadeUp delay={0.1}>
                             <p className="text-xl md:text-2xl font-semibold mb-6 text-accent drop-shadow-md">
-                                Reliable. Compliant. Scalable.
+                                Audit | Taxation | FEMA | Outsourcing Services
                             </p>
                         </FadeUp>
                         <FadeUp delay={0.2}>
