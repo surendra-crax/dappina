@@ -11,6 +11,9 @@ const inter = localFont({
 export const metadata: Metadata = {
     title: 'Dappina & Co. | Chartered Accountants',
     description: 'Comprehensive Accounting, Taxation, Regulatory & Outsourcing Services for Individuals, Businesses & Global Clients.',
+    icons: {
+        icon: '/favicon.png',
+    },
 }
 
 import { Navbar } from "@/components/layout/Navbar"
