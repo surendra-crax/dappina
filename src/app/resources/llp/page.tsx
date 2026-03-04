@@ -102,7 +102,7 @@ export default function LLPPage() {
               "Partners KYC, Mobile Number, Mail ID",
               "Business activity details",
               "Address of business premises",
-              "Mobile & Mail ID of the company"
+              "Mobile & Mail ID of LLP"
             ]}
           />
 
@@ -147,6 +147,7 @@ function Section({ title, items }: { title: string; items: string[] }) {
     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-10">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold text-primary">{title}</h2>
+
         <button className="flex items-center text-sm font-medium text-primary border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition">
           <Download className="w-4 h-4 mr-2" />
           Download
@@ -171,6 +172,7 @@ function SubSection({ title, items }: { title: string; items: string[] }) {
   return (
     <div className="bg-white border-l-4 border-primary rounded-xl shadow-sm p-8">
       <h3 className="text-lg font-semibold text-primary mb-4">{title}</h3>
+
       <ul className="space-y-2 text-gray-700">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2">
