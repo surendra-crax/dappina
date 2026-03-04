@@ -33,7 +33,6 @@ export default function ProprietorPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 space-y-16">
 
-          {/* Reusable Section Component Style */}
           {[
             {
               title: "Income Tax Return – Individual Checklist",
@@ -51,19 +50,25 @@ export default function ProprietorPage() {
                 "Previous Year ITR copy"
               ]
             },
+
             {
               title: "GST Registration – Proprietor Checklist",
               items: [
                 "PAN of Proprietor",
                 "Aadhaar of Proprietor",
                 "Passport size photo",
-                "Business address proof",
-                "Own property: Property tax receipt / Electricity bill",
-                "Rented property: Rental agreement + Property tax receipt + Electricity bill",
+                {
+                  label: "Business address proof",
+                  subItems: [
+                    "Own property: Property tax receipt / Electricity bill",
+                    "Rented property: Rental agreement + Property tax receipt + Electricity bill"
+                  ]
+                },
                 "Mobile & Email",
                 "Nature of business details"
               ]
             },
+
             {
               title: "Trade License Checklist",
               items: [
@@ -75,6 +80,7 @@ export default function ProprietorPage() {
                 "Any 2 neighbours’ details (Name, Mobile & Mail ID)"
               ]
             },
+
             {
               title: "Professional Tax Registration (PTRC/PTEC)",
               items: [
@@ -85,6 +91,7 @@ export default function ProprietorPage() {
                 "GST Certificate (if registered)"
               ]
             },
+
             {
               title: "MSME (Udyam) Registration",
               items: [
@@ -95,6 +102,7 @@ export default function ProprietorPage() {
                 "Mobile & Mail ID"
               ]
             },
+
             {
               title: "Shops & Establishment",
               items: [
@@ -105,6 +113,7 @@ export default function ProprietorPage() {
                 "Telugu Name Board"
               ]
             },
+
             {
               title: "DSC (Digital Signature Certificate)",
               items: [
@@ -114,6 +123,7 @@ export default function ProprietorPage() {
                 "Mobile & Email"
               ]
             },
+
             {
               title: "PF & ESI Registration",
               items: [
@@ -124,6 +134,7 @@ export default function ProprietorPage() {
                 "Date of crossing threshold (20 employees for PF & 10 employees for ESI)"
               ]
             }
+
           ].map((section, index) => (
             <div
               key={index}
@@ -134,7 +145,6 @@ export default function ProprietorPage() {
                   {section.title}
                 </h2>
 
-                {/* Download Placeholder */}
                 <button className="flex items-center text-sm font-medium text-primary border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition">
                   <Download className="w-4 h-4 mr-2" />
                   Download
@@ -142,12 +152,32 @@ export default function ProprietorPage() {
               </div>
 
               <ul className="grid md:grid-cols-2 gap-y-3 gap-x-10 text-gray-700">
-                {section.items.map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <span className="text-primary font-bold mt-1">•</span>
-                    <span>{item}</span>
-                  </li>
-                ))}
+                {section.items.map((item, i) => {
+
+                  if (typeof item === "string") {
+                    return (
+                      <li key={i} className="flex items-start gap-2">
+                        <span className="text-primary font-bold mt-1">•</span>
+                        <span>{item}</span>
+                      </li>
+                    );
+                  }
+
+                  return (
+                    <li key={i} className="flex flex-col gap-2">
+                      <div className="flex items-start gap-2">
+                        <span className="text-primary font-bold mt-1">•</span>
+                        <span>{item.label}</span>
+                      </div>
+
+                      <ul className="ml-6 text-gray-600 space-y-1">
+                        {item.subItems.map((sub, j) => (
+                          <li key={j}>– {sub}</li>
+                        ))}
+                      </ul>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}
