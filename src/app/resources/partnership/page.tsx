@@ -33,17 +33,6 @@ export default function PartnershipPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 space-y-16">
 
-          {/* PARTNERSHIP DEED */}
-          <Section
-            title="Partnership Deed Documentation"
-            items={[
-              "Draft partnership deed",
-              "Stamp paper (as per state rules)",
-              "Partner PAN & Aadhaar",
-              "Capital contribution details"
-            ]}
-          />
-
           {/* FIRM REGISTRATION */}
           <Section
             title="Firm Registration (Registrar of Firms)"
@@ -145,6 +134,7 @@ function Section({ title, items }: { title: string; items: string[] }) {
     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-10">
       <div className="flex justify-between items-center mb-6">
         <h2 className="text-2xl font-semibold text-primary">{title}</h2>
+
         <button className="flex items-center text-sm font-medium text-primary border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition">
           <Download className="w-4 h-4 mr-2" />
           Download
