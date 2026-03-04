@@ -33,7 +33,7 @@ export default function PrivateLimitedPage() {
       <section className="py-20 bg-gray-50">
         <div className="max-w-5xl mx-auto px-6 space-y-16">
 
-          {/* INCORPORATION */}
+          {/* COMPANY INFORMATION */}
           <Section
             title="Incorporation – Company Information"
             items={[
@@ -48,6 +48,7 @@ export default function PrivateLimitedPage() {
             ]}
           />
 
+          {/* DIRECTORS DETAILS */}
           <Section
             title="Directors’ Details"
             subtitle="For each proposed Director provide:"
@@ -185,65 +186,29 @@ export default function PrivateLimitedPage() {
             ]}
           />
 
-          {/* CLRA */}
-          <Section
-            title="CLRA – Contractor License (Company Documents)"
-            items={[
-              "Certificate of Incorporation",
-              "PAN of Company",
-              "MOA & AOA",
-              "S&E Certificate of the company"
-            ]}
-          />
-
-          <SubSection
-            title="Principal Employer Documents"
-            items={[
-              "Copy of CLRA Registration Certificate (Form II)",
-              "Form V (Certificate issued by Principal Employer)",
-              "Work Order / Contract Agreement"
-            ]}
-          />
-
-          <SubSection
-            title="Establishment & Contract Details"
-            items={[
-              "Address of Work Location",
-              "Nature of Work / Scope of Contract",
-              "Duration of Contract",
-              "Maximum number of contract labour proposed"
-            ]}
-          />
-
-          <SubSection
-            title="Directors / Authorized Signatory Details"
-            items={[
-              "PAN & Aadhaar",
-              "Address Proof",
-              "Mobile Number & Email ID"
-            ]}
-          />
-
-          <SubSection
-            title="Employee / Labour Details"
-            items={[
-              "Proposed number of contract labour",
-              "List of employees"
-            ]}
-          />
-
         </div>
       </section>
     </div>
   );
 }
 
-/* SECTION */
-function Section({ title, subtitle, items }) {
+
+/* SECTION COMPONENT */
+function Section({
+  title,
+  subtitle,
+  items
+}: {
+  title: string
+  subtitle?: string
+  items: string[]
+}) {
   return (
     <div className="bg-white rounded-2xl border border-gray-200 shadow-sm p-10">
+
       <div className="flex justify-between items-center mb-4">
         <h2 className="text-2xl font-semibold text-primary">{title}</h2>
+
         <button className="flex items-center text-sm font-medium text-primary border border-primary px-4 py-2 rounded-md hover:bg-primary hover:text-white transition">
           <Download className="w-4 h-4 mr-2" />
           Download
@@ -262,16 +227,31 @@ function Section({ title, subtitle, items }) {
           </li>
         ))}
       </ul>
+
     </div>
-  );
+  )
 }
 
-/* SUBSECTION */
-function SubSection({ title, subtitle, items }) {
+
+/* SUB SECTION */
+function SubSection({
+  title,
+  subtitle,
+  items
+}: {
+  title: string
+  subtitle?: string
+  items: string[]
+}) {
   return (
     <div className="bg-white border-l-4 border-primary rounded-xl shadow-sm p-8">
+
       <h3 className="text-lg font-semibold text-primary mb-2">{title}</h3>
-      {subtitle && <p className="text-gray-600 mb-3">{subtitle}</p>}
+
+      {subtitle && (
+        <p className="text-gray-600 mb-3">{subtitle}</p>
+      )}
+
       <ul className="space-y-2 text-gray-700">
         {items.map((item, i) => (
           <li key={i} className="flex items-start gap-2">
@@ -280,6 +260,7 @@ function SubSection({ title, subtitle, items }) {
           </li>
         ))}
       </ul>
+
     </div>
-  );
+  )
 }
