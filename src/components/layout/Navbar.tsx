@@ -18,6 +18,7 @@ const mainLinks = [
     { name: "Leadership", href: "/leadership" },
     { name: "Industries", href: "/industries" },
     { name: "Resources", href: "/resources" },
+    { name: "Useful Links", href: "/useful-links" },
     { name: "Contact", href: "/contact" },
 ];
 
@@ -128,6 +129,12 @@ export function Navbar() {
                             className={cn("text-sm font-medium hover:text-primary transition-colors", pathname === "/resources" ? "text-primary" : "text-gray-700")}
                         >
                             Resources
+                        </Link>
+                        <Link
+                            href="/useful-links"
+                            className={cn("text-sm font-medium hover:text-primary transition-colors", pathname === "/useful-links" ? "text-primary" : "text-gray-700")}
+                        >
+                            Useful Links
                         </Link>
                     </nav>
 

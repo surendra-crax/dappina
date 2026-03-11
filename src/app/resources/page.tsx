@@ -38,72 +38,162 @@ export default function ResourcesPage() {
         <div className="max-w-5xl mx-auto px-6">
 
           <FadeUp>
-            <div className="space-y-10">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 
-              {/* CATEGORY BLOCK */}
-              <Link
-                href="/resources/proprietor"
-                className="group block bg-white border border-gray-200 p-10 rounded-xl shadow-sm hover:shadow-md hover:border-primary transition"
-              >
-                <div className="flex justify-between items-center">
+              {/* CATEGORY BLOCK 1 */}
+              <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition flex flex-col h-full">
+                <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-semibold text-gray-900">
                     1️⃣ Proprietor / Individual
                   </h2>
-                  <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition" />
                 </div>
-                <p className="mt-4 text-gray-600 max-w-2xl">
-                  Income Tax, GST, Trade License, MSME, Shops & Establishment,
-                  DSC, PF & ESI documentation checklists.
-                </p>
-              </Link>
+                <ul className="space-y-3 flex-grow">
+                  {[
+                    "Income Tax Return",
+                    "GST Registration",
+                    "Trade License",
+                    "Professional Tax (PTRC/PTEC)",
+                    "MSME (Udyam) Registration",
+                    "Shops & Establishment",
+                    "DSC (Digital Signature)",
+                    "PF & ESI Registration"
+                  ].map((item, i) => {
+                    const hashId = item.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return (
+                      <li key={i}>
+                        <Link
+                          href={`/resources/proprietor#${hashId}`}
+                          className="text-gray-600 hover:text-primary transition flex items-center group"
+                        >
+                          <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
+                          <span className="group-hover:translate-x-1 transition-transform">{item}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <Link href="/resources/proprietor" className="text-primary font-medium flex items-center group inline-flex">
+                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+                  </Link>
+                </div>
+              </div>
 
-              <Link
-                href="/resources/private-limited"
-                className="group block bg-white border border-gray-200 p-10 rounded-xl shadow-sm hover:shadow-md hover:border-primary transition"
-              >
-                <div className="flex justify-between items-center">
+              {/* CATEGORY BLOCK 2 */}
+              <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition flex flex-col h-full">
+                <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-semibold text-gray-900">
                     2️⃣ Private Limited Company
                   </h2>
-                  <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition" />
                 </div>
-                <p className="mt-4 text-gray-600 max-w-2xl">
-                  Incorporation, Director KYC, GST, FEMA, CLRA, MSME,
-                  Professional Tax, PF & ESI compliance requirements.
-                </p>
-              </Link>
+                <ul className="space-y-3 flex-grow">
+                  {[
+                    "Incorporation",
+                    "GST Registration",
+                    "FEMA / FDI Reporting",
+                    "Trade License",
+                    "Professional Tax (PTRC/PTEC)",
+                    "MSME (Udyam) Registration",
+                    "Shops & Establishment",
+                    "PF (EPFO) & ESI Registration",
+                    "CLRA – Contractor License"
+                  ].map((item, i) => {
+                    const hashId = item.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return (
+                      <li key={i}>
+                        <Link
+                          href={`/resources/private-limited#${hashId}`}
+                          className="text-gray-600 hover:text-primary transition flex items-center group"
+                        >
+                          <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
+                          <span className="group-hover:translate-x-1 transition-transform">{item}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <Link href="/resources/private-limited" className="text-primary font-medium flex items-center group inline-flex">
+                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+                  </Link>
+                </div>
+              </div>
 
-              <Link
-                href="/resources/llp"
-                className="group block bg-white border border-gray-200 p-10 rounded-xl shadow-sm hover:shadow-md hover:border-primary transition"
-              >
-                <div className="flex justify-between items-center">
+              {/* CATEGORY BLOCK 3 */}
+              <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition flex flex-col h-full">
+                <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-semibold text-gray-900">
                     3️⃣ LLP (Limited Liability Partnership)
                   </h2>
-                  <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition" />
                 </div>
-                <p className="mt-4 text-gray-600 max-w-2xl">
-                  LLP Incorporation, GST, Trade License, MSME, Shops &
-                  Establishment, Professional Tax, PF & ESI documentation.
-                </p>
-              </Link>
+                <ul className="space-y-3 flex-grow">
+                  {[
+                    "LLP Incorporation",
+                    "GST Registration",
+                    "Trade License",
+                    "Professional Tax (PTRC/PTEC)",
+                    "MSME (Udyam) Registration",
+                    "Shops & Establishment",
+                    "PF (EPFO) & ESI Registration"
+                  ].map((item, i) => {
+                    const hashId = item.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return (
+                      <li key={i}>
+                        <Link
+                          href={`/resources/llp#${hashId}`}
+                          className="text-gray-600 hover:text-primary transition flex items-center group"
+                        >
+                          <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
+                          <span className="group-hover:translate-x-1 transition-transform">{item}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <Link href="/resources/llp" className="text-primary font-medium flex items-center group inline-flex">
+                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+                  </Link>
+                </div>
+              </div>
 
-              <Link
-                href="/resources/partnership"
-                className="group block bg-white border border-gray-200 p-10 rounded-xl shadow-sm hover:shadow-md hover:border-primary transition"
-              >
-                <div className="flex justify-between items-center">
+              {/* CATEGORY BLOCK 4 */}
+              <div className="bg-white border border-gray-200 p-8 rounded-xl shadow-sm hover:shadow-md transition flex flex-col h-full">
+                <div className="flex justify-between items-center mb-6">
                   <h2 className="text-2xl font-semibold text-gray-900">
                     4️⃣ Partnership Firm
                   </h2>
-                  <ArrowRight className="w-5 h-5 text-primary group-hover:translate-x-1 transition" />
                 </div>
-                <p className="mt-4 text-gray-600 max-w-2xl">
-                  Partnership Deed, Firm Registration, GST, MSME, Shops &
-                  Establishment, Trade License, PF & ESI requirements.
-                </p>
-              </Link>
+                <ul className="space-y-3 flex-grow">
+                  {[
+                    "Firm Registration",
+                    "GST Registration",
+                    "Trade License",
+                    "Professional Tax (PTRC/PTEC)",
+                    "MSME Registration",
+                    "Shops & Establishment",
+                    "PF (EPFO) & ESI Registration"
+                  ].map((item, i) => {
+                    const hashId = item.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+                    return (
+                      <li key={i}>
+                        <Link
+                          href={`/resources/partnership#${hashId}`}
+                          className="text-gray-600 hover:text-primary transition flex items-center group"
+                        >
+                          <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
+                          <span className="group-hover:translate-x-1 transition-transform">{item}</span>
+                        </Link>
+                      </li>
+                    );
+                  })}
+                </ul>
+                <div className="mt-8 pt-6 border-t border-gray-100">
+                  <Link href="/resources/partnership" className="text-primary font-medium flex items-center group inline-flex">
+                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
+                  </Link>
+                </div>
+              </div>
 
             </div>
           </FadeUp>
