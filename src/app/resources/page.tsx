@@ -62,7 +62,7 @@ export default function ResourcesPage() {
                     return (
                       <li key={i}>
                         <Link
-                          href={`/resources/proprietor#${hashId}`}
+                          href={`/resources/proprietor/${hashId}`}
                           className="text-gray-600 hover:text-primary transition flex items-center group"
                         >
                           <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
@@ -72,11 +72,6 @@ export default function ResourcesPage() {
                     );
                   })}
                 </ul>
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <Link href="/resources/proprietor" className="text-primary font-medium flex items-center group inline-flex">
-                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
-                  </Link>
-                </div>
               </div>
 
               {/* CATEGORY BLOCK 2 */}
@@ -102,7 +97,7 @@ export default function ResourcesPage() {
                     return (
                       <li key={i}>
                         <Link
-                          href={`/resources/private-limited#${hashId}`}
+                          href={`/resources/private-limited/${hashId}`}
                           className="text-gray-600 hover:text-primary transition flex items-center group"
                         >
                           <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
@@ -112,11 +107,6 @@ export default function ResourcesPage() {
                     );
                   })}
                 </ul>
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <Link href="/resources/private-limited" className="text-primary font-medium flex items-center group inline-flex">
-                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
-                  </Link>
-                </div>
               </div>
 
               {/* CATEGORY BLOCK 3 */}
@@ -140,7 +130,7 @@ export default function ResourcesPage() {
                     return (
                       <li key={i}>
                         <Link
-                          href={`/resources/llp#${hashId}`}
+                          href={`/resources/llp/${hashId}`}
                           className="text-gray-600 hover:text-primary transition flex items-center group"
                         >
                           <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
@@ -150,11 +140,6 @@ export default function ResourcesPage() {
                     );
                   })}
                 </ul>
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <Link href="/resources/llp" className="text-primary font-medium flex items-center group inline-flex">
-                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
-                  </Link>
-                </div>
               </div>
 
               {/* CATEGORY BLOCK 4 */}
@@ -178,7 +163,7 @@ export default function ResourcesPage() {
                     return (
                       <li key={i}>
                         <Link
-                          href={`/resources/partnership#${hashId}`}
+                          href={`/resources/partnership/${hashId}`}
                           className="text-gray-600 hover:text-primary transition flex items-center group"
                         >
                           <span className="text-primary font-bold mr-2 opacity-70 group-hover:opacity-100">•</span>
@@ -188,11 +173,6 @@ export default function ResourcesPage() {
                     );
                   })}
                 </ul>
-                <div className="mt-8 pt-6 border-t border-gray-100">
-                  <Link href="/resources/partnership" className="text-primary font-medium flex items-center group inline-flex">
-                    View Full Details <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition" />
-                  </Link>
-                </div>
               </div>
 
             </div>
