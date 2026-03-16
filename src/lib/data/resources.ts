@@ -410,7 +410,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
         title: "LLP Incorporation",
         sections: [
           {
-            title: "LLP Incorporation",
+            title: "LLP Information",
             items: [
               "Proposed LLP name",
               "Partner PAN & Aadhaar",
