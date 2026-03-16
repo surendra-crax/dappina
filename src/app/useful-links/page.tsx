@@ -62,14 +62,19 @@ const linkCategories = [
         color: "bg-emerald-50/50",
         links: [
             {
-                name: "EPFO Portal",
-                description: "Employees' Provident Fund Organisation - Member / Employer Portal.",
-                href: "https://www.epfindia.gov.in/"
+                name: "EPF Employer Portal",
+                description: "Employees' Provident Fund Organisation - Employer Unified Portal.",
+                href: "https://unifiedportal-emp.epfindia.gov.in/epfo/"
+            },
+            {
+                name: "EPF Member Portal",
+                description: "Employees' Provident Fund Organisation - Member Unified Portal.",
+                href: "https://unifiedportal-mem.epfindia.gov.in/memberinterface/"
             },
             {
                 name: "ESIC Portal",
-                description: "Employees' State Insurance Corporation login Portal.",
-                href: "https://www.esic.in/"
+                description: "Employees' State Insurance Corporation - Official Portal.",
+                href: "https://esic.gov.in/"
             },
             {
                 name: "Shram Suvidha",

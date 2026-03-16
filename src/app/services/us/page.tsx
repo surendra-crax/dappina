@@ -94,7 +94,13 @@ export default function USTaxPracticePage() {
                             <FileText className="w-10 h-10 text-primary mb-6" />
                             <h3 className="text-xl font-bold text-gray-900 mb-4">Tax Return Preparation</h3>
                             <ul className="space-y-3 flex-grow">
-                                {["Form 1040 (Individuals)", "Form 1065 (Partnerships)", "Form 1120 (C-Corps)", "Form 1120S (S-Corps)"].map((item, i) => (
+                                {[
+                                    "Form 1040 – Individual Returns",
+                                    "Form 1065 – Partnership Returns",
+                                    "Form 1120 – C-Corporation Returns",
+                                    "Form 1120S – S-Corporation Returns",
+                                    "State Tax Returns Preparation"
+                                ].map((item, i) => (
                                     <li key={i} className="flex items-center text-gray-700 text-sm font-medium">
                                         <CheckCircle className="w-4 h-4 text-accent mr-3" /> {item}
                                     </li>
@@ -110,9 +116,10 @@ export default function USTaxPracticePage() {
                                 {[
                                     "General Ledger Maintenance",
                                     "Bank & Credit Card Reconciliation",
+                                    "Accounts Payable & Accounts Receivable",
                                     "Payroll Processing Support",
-                                    "Financial Statements Preparation",
-                                    "Year-end Closing Support"
+                                    "Financial Statement Preparation",
+                                    "Month-End & Year-End Closing"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center text-gray-700 text-sm font-medium">
                                         <CheckCircle className="w-4 h-4 text-accent mr-3" /> {item}
@@ -128,8 +135,10 @@ export default function USTaxPracticePage() {
                             <ul className="space-y-3 flex-grow">
                                 {[
                                     "IRS Notice Handling",
+                                    "IRS Transcript Analysis",
                                     "Voluntary Disclosures",
                                     "NRI U.S. Tax Filings",
+                                    "ITIN Application Support",
                                     "Dedicated CPA Support Model"
                                 ].map((item, i) => (
                                     <li key={i} className="flex items-center text-gray-700 text-sm font-medium">
