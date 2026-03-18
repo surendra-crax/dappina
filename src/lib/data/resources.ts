@@ -170,67 +170,58 @@ export const resourcesData: Record<string, ResourceCategory> = {
     description: "Incorporation and compliance documentation checklists.",
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40",
     topics: [
+  {
+    id: "incorporation",
+    title: "Incorporation",
+    sections: [
       {
-        id: "incorporation",
-        title: "Incorporation",
-        sections: [
+        title: "Company Information",
+        items: [
+          "Proposed Company Name (2–3 options in order of preference)",
+          "Nature of Business / Main Objects",
+          "Registered Office Address",
+          "Official Email ID",
+          "Official Mobile Number",
+          "Authorized Share Capital",
+          "Paid-up Share Capital",
+          "Shareholding Pattern (Subscriber-wise details)"
+        ]
+      },
+      {
+        title: "Directors’ Details",
+        subtitle: "For each proposed Director provide:",
+        items: [
+          "Occupation",
+          "Email ID (Personal)",
+          "Mobile Number (Personal)",
+          "Recent passport-size photograph",
+          "PAN, Aadhaar & Passport (Mandatory for Foreign Nationals)",
+          "Existing DIN (if already allotted)",
+          "Residential Address",
+          "Address Proof (Bank Statement, Electricity Bill, Telephone / Mobile Bill)",
+          "Duration of Stay at Present Address",
+          "Educational Qualification",
           {
-            title: "Company Information",
-            items: [
-              "Proposed Company Name (2–3 options in order of preference)",
-              "Nature of Business / Main Objects",
-              "Registered Office Address",
-              "Official Email ID",
-              "Official Mobile Number",
-              "Authorized Share Capital",
-              "Paid-up Share Capital",
-              "Shareholding Pattern (Subscriber-wise details)"
-            ]
-          },
-          {
-            title: "Directors’ Details",
-            subtitle: "For each proposed Director provide:",
-            items: [
-              "Occupation",
-              "Email ID (Personal)",
-              "Mobile Number (Personal)",
-              "Recent passport-size photograph",
-              "Existing DIN (if already allotted)",
-              "Residential Address",
-              "Duration of Stay at Present Address",
-              "Educational Qualification",
-              "CIN / LLPIN / FCRN / Registration numbers of other entities",
+            title: "Details of other entities in which Director has interest:",
+            subItems: [
+              "CIN / LLPIN / FCRN / Registration Numbers",
               "Percentage of Shareholding",
               "Amount Invested"
-            ]
-          },
-          {
-            title: "Identity Proof (Mandatory)",
-            items: [
-              "PAN Card (Self-attested)",
-              "Aadhaar Card (Self-attested)",
-              "Passport (Mandatory for Foreign Nationals)"
-            ]
-          },
-          {
-            title: "Address Proof (Not older than 2 months)",
-            subtitle: "Only when director doesn’t have valid DIN",
-            items: [
-              "Bank Statement",
-              "Electricity Bill",
-              "Telephone / Mobile Bill"
-            ]
-          },
-          {
-            title: "Registered Office Proof",
-            items: [
-              "Ownership document (if self-owned property)",
-              "OR Rent Agreement + NOC from Owner",
-              "Utility Bill (not older than 2 months)"
             ]
           }
         ]
       },
+      {
+        title: "Registered Office Proof",
+        items: [
+          "Ownership document (if self-owned property)",
+          "OR Rent Agreement + NOC from Owner",
+          "Utility Bill (not older than 2 months)"
+        ]
+      }
+    ]
+  }
+]
       {
         id: "gst-registration",
         title: "GST Registration – Company",
