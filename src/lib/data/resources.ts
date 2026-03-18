@@ -220,8 +220,7 @@ export const resourcesData: Record<string, ResourceCategory> = {
         ]
       }
     ]
-  }
-]
+  },
       {
         id: "gst-registration",
         title: "GST Registration – Company",
