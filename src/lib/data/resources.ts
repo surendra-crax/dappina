@@ -1,7 +1,14 @@
+export type ResourceItem =
+  | string
+  | {
+      title: string;
+      subItems: string[];
+    };
+
 export type ResourceSection = {
   title: string | null;
   subtitle?: string;
-  items: string[];
+  items: ResourceItem[];
 };
 
 export type ResourceTopic = {
