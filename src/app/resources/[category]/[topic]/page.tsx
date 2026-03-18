@@ -103,18 +103,40 @@ export default async function TopicPage({ params }: Props) {
                   {sec.subtitle && (
                     <p className="text-gray-600 mb-4 font-medium">{sec.subtitle}</p>
                   )}
-                  {sec.items && sec.items.length > 0 && (
-                    <ul className="grid sm:grid-cols-2 gap-y-4 gap-x-12 text-gray-700">
-                      {sec.items.map((item, i) => (
-                        <li key={i} className="flex items-start gap-4">
-                          <span className="text-primary font-bold mt-1.5 text-lg leading-none">
-                            •
-                          </span>
-                          <span className="leading-relaxed">{item}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  )}
+                 {sec.items.map((item, i) => {
+  // Case 1: Normal string
+  if (typeof item === "string") {
+    return (
+      <li key={i} className="flex items-start gap-4">
+        <span className="text-primary font-bold mt-1.5 text-lg leading-none">
+          •
+        </span>
+        <span className="leading-relaxed">{item}</span>
+      </li>
+    );
+  }
+
+  // Case 2: Nested object
+  return (
+    <li key={i} className="flex flex-col gap-2">
+      <div className="flex items-start gap-4">
+        <span className="text-primary font-bold mt-1.5 text-lg leading-none">
+          •
+        </span>
+        <span className="leading-relaxed font-medium">{item.title}</span>
+      </div>
+
+      <ul className="ml-8 space-y-2 text-gray-600">
+        {item.subItems.map((sub, j) => (
+          <li key={j} className="flex items-start gap-3">
+            <span className="text-gray-400 mt-1">–</span>
+            <span>{sub}</span>
+          </li>
+        ))}
+      </ul>
+    </li>
+  );
+})}
                 </div>
               ))}
             </div>
