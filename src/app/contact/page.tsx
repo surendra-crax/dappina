@@ -86,20 +86,31 @@ export default function ContactPage() {
                                 </div>
                             </div>
 
-                            {/* Map Placeholder */}
-                            <div className="mt-12 w-full h-80 rounded-sm relative overflow-hidden shadow-md group border border-gray-200">
-                                <Image
-                                    src="https://images.unsplash.com/photo-1524661135-423995f22d0b?q=80&w=2074&auto=format&fit=crop"
-                                    alt="Location Map"
-                                    fill
-                                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                                />
-                                <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors duration-500"></div>
-                                <div className="absolute inset-0 flex flex-col items-center justify-center text-white p-6 text-center">
-                                    <MapPin className="w-10 h-10 mb-3 drop-shadow-md" />
-                                    <span className="font-bold text-xl drop-shadow-md">View on Google Maps</span>
-                                </div>
-                            </div>
+                           {/* Google Map */}
+<div className="mt-12 w-full h-80 rounded-sm relative overflow-hidden shadow-md border border-gray-200">
+    <iframe
+        src="https://www.google.com/maps?q=NUjvXatmFKqfSfJbA&output=embed"
+        width="100%"
+        height="100%"
+        style={{ border: 0 }}
+        allowFullScreen=""
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
+        className="absolute inset-0"
+    ></iframe>
+
+    <a
+        href="https://maps.app.goo.gl/NUjvXatmFKqfSfJbA?g_st=ic"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="absolute inset-0 flex flex-col items-center justify-center bg-primary/20 hover:bg-primary/10 transition-colors duration-500 text-white text-center"
+    >
+        <MapPin className="w-10 h-10 mb-3 drop-shadow-md" />
+        <span className="font-bold text-xl drop-shadow-md">
+            View on Google Maps
+        </span>
+    </a>
+</div>
                         </FadeUp>
 
                         {/* Contact Form */}
