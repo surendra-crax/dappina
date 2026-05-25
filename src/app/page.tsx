@@ -226,7 +226,57 @@ export default function Home() {
                             <StaggerItem key={i} className="bg-white/5 border border-white/10 p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300">
                                 <feature.icon className="w-8 h-8 text-secondary mb-4" />
                                 <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
-                                <p className="text-sm text-gray-400">Delivering structured review mechanisms under expert partner supervision.</p>
+                                <p className="text-sm text-gray-400">{[
+    {
+        title: "10+ Years Experience",
+        icon: TrendingUp,
+        description:
+            "Over a decade of experience in taxation, compliance, audit, and advisory services across diverse industries.",
+    },
+    {
+        title: "India & U.S. Expertise",
+        icon: Globe,
+        description:
+            "Providing cross-border accounting, taxation, outsourcing, and business support services for Indian and U.S. clients.",
+    },
+    {
+        title: "Strong Regulatory Grasp",
+        icon: FileText,
+        description:
+            "Deep understanding of GST, Income Tax, ROC, FEMA, payroll, and corporate compliance frameworks.",
+    },
+    {
+        title: "Client-Focused Advisory",
+        icon: UserCheck,
+        description:
+            "Practical and business-oriented solutions tailored to client requirements, growth, and risk management.",
+    },
+    {
+        title: "Scalable Solutions",
+        icon: CheckCircle,
+        description:
+            "Flexible support models designed for startups, SMEs, and growing enterprises with evolving compliance needs.",
+    },
+    {
+        title: "Transparent & Ethical",
+        icon: ShieldCheck,
+        description:
+            "Committed to professional integrity, transparent communication, and timely service delivery.",
+    },
+].map((feature, i) => (
+    <StaggerItem
+        key={i}
+        className="bg-white/5 border border-white/10 p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300"
+    >
+        <feature.icon className="w-8 h-8 text-secondary mb-4" />
+        <h3 className="text-xl font-bold text-white mb-2">
+            {feature.title}
+        </h3>
+        <p className="text-sm text-gray-400">
+            {feature.description}
+        </p>
+    </StaggerItem>
+))}</p>
                             </StaggerItem>
                         ))}
                     </StaggerContainer>
