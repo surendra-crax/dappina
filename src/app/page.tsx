@@ -190,89 +190,50 @@ export default function Home() {
                     </div>
                 </div>
             </section>
-{/* WHY CHOOSE US */}
-<section className="relative py-20 lg:py-28 text-white overflow-hidden">
-    {/* Background Image & Overlay */}
-    <div className="absolute inset-0 z-0">
-        <Image
-            src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
-            alt="Why Choose Us"
-            fill
-            className="object-cover opacity-40 grayscale"
-        />
-        <div className="absolute inset-0 bg-primary/95"></div>
-    </div>
 
-    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-16">
-            <FadeUp>
-                <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                    Why Choose Dappina & Co.
-                </h2>
-                <p className="text-lg text-gray-300">
-                    A partner-led approach ensuring technical excellence and uncompromising ethics.
-                </p>
-            </FadeUp>
-        </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-                {
-                    title: "10+ Years Experience",
-                    icon: TrendingUp,
-                    description:
-                        "Over a decade of experience in taxation, compliance, audit, and advisory services across diverse industries.",
-                },
-                {
-                    title: "India & U.S. Expertise",
-                    icon: Globe,
-                    description:
-                        "Providing cross-border accounting, taxation, outsourcing, and business support services for Indian and U.S. clients.",
-                },
-                {
-                    title: "Strong Regulatory Grasp",
-                    icon: FileText,
-                    description:
-                        "Deep understanding of GST, Income Tax, ROC, FEMA, payroll, and corporate compliance frameworks.",
-                },
-                {
-                    title: "Client-Focused Advisory",
-                    icon: UserCheck,
-                    description:
-                        "Practical and business-oriented solutions tailored to client requirements, growth, and risk management.",
-                },
-                {
-                    title: "Scalable Solutions",
-                    icon: CheckCircle,
-                    description:
-                        "Flexible support models designed for startups, SMEs, and growing enterprises with evolving compliance needs.",
-                },
-                {
-                    title: "Transparent & Ethical",
-                    icon: ShieldCheck,
-                    description:
-                        "Committed to professional integrity, transparent communication, and timely service delivery.",
-                },
-            ].map((feature, i) => (
-                <div
-                    key={i}
-                    className="bg-white/5 border border-white/10 p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300"
-                >
-                    <feature.icon className="w-8 h-8 text-secondary mb-4" />
-
-                    <h3 className="text-xl font-bold text-white mb-3">
-                        {feature.title}
-                    </h3>
-
-                    <p className="text-sm text-gray-400 leading-relaxed">
-                        {feature.description}
-                    </p>
+            {/* WHY CHOOSE US */}
+            <section className="relative py-20 lg:py-28 text-white overflow-hidden">
+                {/* Background Image & Overlay */}
+                <div className="absolute inset-0 z-0">
+                    <Image
+                        src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop"
+                        alt="Why Choose Us"
+                        fill
+                        className="object-cover opacity-40 grayscale"
+                    />
+                    <div className="absolute inset-0 bg-primary/95"></div>
                 </div>
-            ))}
-        </div>
-    </div>
-</section>
 
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                    <div className="text-center max-w-3xl mx-auto mb-16">
+                        <FadeUp>
+                            <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Choose Dappina & Co.</h2>
+                            <p className="text-lg text-gray-300">
+                                A partner-led approach ensuring technical excellence and uncompromising ethics.
+                            </p>
+                        </FadeUp>
+                    </div>
+
+                    <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {[
+                            { title: "10+ Years Experience", icon: TrendingUp },
+                            { title: "India & U.S. Expertise", icon: Globe },
+                            { title: "Strong Regulatory Grasp", icon: FileText },
+                            { title: "Client-Focused Advisory", icon: UserCheck },
+                            { title: "Scalable Solutions", icon: CheckCircle },
+                            { title: "Transparent & Ethical", icon: ShieldCheck },
+                        ].map((feature, i) => (
+                            <StaggerItem key={i} className="bg-white/5 border border-white/10 p-6 rounded-sm hover:-translate-y-1 transition-transform duration-300">
+                                <feature.icon className="w-8 h-8 text-secondary mb-4" />
+                                <h3 className="text-xl font-bold text-white mb-2">{feature.title}</h3>
+                                <p className="text-sm text-gray-400">Delivering structured review mechanisms under expert partner supervision.</p>
+                            </StaggerItem>
+                        ))}
+                    </StaggerContainer>
+                </div>
+            </section>
+            
             {/* INDUSTRIES SNAPSHOT */}
             <section className="py-20 lg:py-28 bg-white">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
